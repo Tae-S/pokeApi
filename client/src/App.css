@@ -1,0 +1,132 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  color:#aaa;
+}
+
+.limit{
+  width:38em;
+  display: flex;
+  justify-content:flex-end;
+  flex-direction: row;
+  position: absolute;
+  padding:auto;
+  margin:auto;
+  /* border:1px solid gold; */
+  top:3em;
+}
+
+.limit span{
+  /* border:1px solid black; */
+  display: inline-flex;
+  justify-content: center;
+  align-items:center;
+  padding:0.1em 0.3em;
+  
+}
+
+.limit span:last-child{
+  font-size:0.7rem;
+  color:#777;
+}
+
+.radio{
+  appearance: none;
+  border:0.15em solid #aaa;
+  width:1.3em;
+  height:1.3em;
+  border-radius:50%;
+  margin-left:0.2em;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  /* z-index:1; */
+}
+
+.radio:before{
+  position: absolute;
+  content:'';
+  width:70%;
+  height:70%;
+  border-radius: 50%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  /* border:0.15em solid red;  */
+  /* background-color: #fff; */
+  /* z-index:3; */
+}
+/* 
+.radio:focus{
+  border:0.5em solid #21f;
+} */
+
+.radio:checked{
+  border:0.1em solid #0DFF92;
+}
+
+.radio:checked:before {
+  background-color: #0DFF92;
+}
+
+.radio:nth-of-type(1):before{
+  transform:translate(-50%,-50%);
+}
+/*TODO: tabIndex for the radio buttons and pages*/
+
+.radio:checked{
+  color:#0DFF92;
+}
+
+
+/*DEF: pagination styles*/
+.pages{
+  /* border: 1px solid gold; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top:3em;
+  left:1em;
+  
+}
+.btn{
+  padding:0.4em 0.6em;
+  margin: 0 0.3em;
+  /* background:rgb(47, 119, 253); */
+  border: 0.1em solid #aaa;
+  background: transparent;
+  color:rgb(255, 239, 210);
+  outline:none;
+  
+  letter-spacing:0.08em;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-in;
+}
+
+.current-page{
+  /* background:rgb(34, 83, 173); */
+  background-color: #0DFF92;
+  color:rgb(190, 188, 185);
+  color:#222;
+  border:0.1em solid #0DFF92;
+}
+
+
+/*DEF: content styles */
+.pokeball{
+  margin:5em 0 1em 1em;
+}
+
+/*DEF: Pokemon styles*/
+.poke-btn{
+  display: inline;
+  cursor: pointer;
+  
+}
+
+.poke-btn:disabled{
+  cursor:not-allowed;
+  background-color: rgba(255,255,255,0.4);
+  color:rgba(255, 239, 210,0.5);
+}
